@@ -5,6 +5,7 @@
  
 get_header(); 
 
+// Display posts from choto-golpo category of the current month Query Starts
 $currentyear = date('Y');
 	$currentmonth = date('m');
 	$args = array(
@@ -18,9 +19,13 @@ $currentyear = date('Y');
 
 	// The Query
 	$the_query = new WP_Query( $args );
-	
+// Display posts from choto-golpo category of the current month Query Ends	
 ?>
- 
+
+
+<!-- 
+  front-end display starts  
+-->
 <section id="gallery">
   <div class="container">
     <div class="row">
@@ -53,11 +58,8 @@ echo "No Post Found.";
 /* Restore original Post Data */
 wp_reset_postdata();
 ?>
-
-
-
-    
-  </div>
+ 
+</div>
 </div>
 </section>
 
